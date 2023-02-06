@@ -1,0 +1,85 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+   background-color: #C5B4E3;
+   text-align:center;
+   align-items: center;
+   flex-wrap: wrap;
+   margin:0;
+}
+
+@media (orientation:landscape) {
+  body {
+
+  background-color: #99d0d7;
+
+  }
+
+}
+
+
+p,h1,h2,h3,h4 {
+    color: black;
+    font-family: Electrolize;
+    margin:20px
+
+}
+
+img {
+    margin: 60px 0 30px 0;
+    width: 250px
+
+}
+
+input {
+
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: Electrolize;
+    text-align: center;
+    font-size: 1.3em;
+
+}
+
+#submit {
+    background-color: palevioletred;
+    color: white;
+    width: 200px;
+    margin: 0rem;
+
+
+}
+
+#submit:hover {
+    background-color: mediumvioletred;
+    cursor: pointer;
+
+}
+
+#alert-message {
+  transition: opacity 0.3s ease-out;
+}
+
+
+input:focus {
+    border:solid 3px #bf9000;
+    outline: none;
+
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
