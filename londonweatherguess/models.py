@@ -7,7 +7,7 @@ from sqlalchemy import create_engine, Column, Integer, DateTime, orm
 
 Base = sqlalchemy.orm.declarative_base()
 
-class the_user(Base):
+class TheUser(Base):
     __tablename__ = 'the_user'
     UserAttempt = Column(Integer, autoincrement=True, primary_key=True)
     UserGuess = Column(Integer)

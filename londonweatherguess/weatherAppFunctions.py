@@ -3,7 +3,7 @@ import random
 from datetime import datetime
 from sqlalchemy import func
 from londonweatherguess import database
-from londonweatherguess.models import the_user
+from londonweatherguess.models import TheUser
 
 
 def check_if_temps_match(users_guess, actualTemp):
@@ -21,7 +21,7 @@ def getUserAttemptNumber():
     """
     This function returns the number of guessing attempts the user has had
     """
-    result = database.session.query(func.max(the_user.UserAttempt)).scalar()
+    result = database.session.query(func.max(TheUser.UserAttempt)).scalar()
     return result
 
 
@@ -52,7 +52,7 @@ def saveResultToDatabase(UserGuess, ActualTemp, DateTime):
     DateTime = datetime.strptime(DateTime[:-4],
                                  '%Y-%m-%d %H:%M:%S %z')  # formats date using strptime and slicing to get rid of 'UTC'
 
-    data = the_user(UserGuess=UserGuess, ActualTemp=ActualTemp, DateTime=DateTime)
+    data = TheUser(UserGuess=UserGuess, ActualTemp=ActualTemp, DateTime=DateTime)
     database.session.add(data)
     database.session.commit()
 
