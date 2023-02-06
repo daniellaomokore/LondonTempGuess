@@ -5,7 +5,9 @@
 
 <i>This is a simple web app game where users need to guess the temperature at a certain date and time from the past in London</i>
 
-<img width="950" alt="pic1" src="https://user-images.githubusercontent.com/79287671/216765998-213ba684-129d-451c-9fc8-12218c3d5e01.png">
+<img width="956" alt="picpic" src="https://user-images.githubusercontent.com/79287671/216978137-52fb7585-ad1c-4aab-a333-46650c941e56.png">
+
+<img width="940" alt="picpic1" src="https://user-images.githubusercontent.com/79287671/216978177-b29cf5b2-9171-434f-aa35-6fc1294f2a31.png">
 
 <img width="944" alt="pic2" src="https://user-images.githubusercontent.com/79287671/216766039-4548db10-927c-447d-91c8-c6e3fd67316f.png">
 
