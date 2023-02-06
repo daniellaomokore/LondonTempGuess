@@ -27,7 +27,7 @@ def getUserAttemptNumber():
 
 def get_random_row():
     """
-    This function gets a random row from the csv file, formats some data to be more readable and saves the values from the row into the session
+    This function gets a random row from the csv file, formats some data to be more readable and returns the data
     """
     # Select rows of temperature data from csv file at random
     with open('londonweatherguess/Static/resource/london_temp.csv') as london_temps:
