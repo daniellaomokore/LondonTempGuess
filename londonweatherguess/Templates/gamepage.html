@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+
+{% block title %}LDN Temp Guess{% endblock %}
+
+{% block content %}
+
+     {% with messages = get_flashed_messages(with_categories=true) %}
+     {% if messages %}
+         {% for category,message in messages %}
+         {% if category == "success" %}
+             <div class="alert alert-success mb-3 alert-dismissible fade show" role="alert" id="alert-message" >
+                 {{ message }}
+                 <script src="../static/js/js.js"></script>
+             </div>
+
+         {% endif %}
+
+         {% if category == "error" %}
+             <div class="alert alert-danger mb-3 alert-dismissible fade show" role="alert" id="alert-message" >
+                 {{ message }}
+             </div>
+         {% endif %}
+
+         {% if category == "info" %}
+             <div class="alert alert-success mb-3 alert-dismissible fade show" role="alert" id="alert-message" >
+                 {{ message }}
+             </div>
+
+         {% endif %}
+
+           <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true"></span>
+           </button>
+
+
+
+         {% endfor %}
+
+     {% endif%}
+     {% endwith %}
+
+<h1>🌤️☔❄️</h1>
+
+<h1> Guess the temperature in London on: <br></br>
+
+{{ formatted_date }}</h1>
+
+<form type="submit" name="submit" method="POST">
+    {{ form.hidden_tag() }}  <!-- This will create our csrf token-->
+    <p>{{ form.users_guess(placeholder="Enter Temperature in Celsius") }}°C</p>
+    <br/>
+    {{ form.submit() }}
+</form>
+
+{% endblock %}
