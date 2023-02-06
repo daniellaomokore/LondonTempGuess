@@ -23,7 +23,7 @@
 
 * Run the 'models.py' file to create your database table.
 
-* set up your environmental variables in an .env file in the root. With variables for USER = "[your MYSQL user]", DATABASEPASSWORD = "[your MYSQL password]" ,HOST = "[your MYSQL host]" and SECRET_KEY = "[your secret key]"
+* set up your environmental variables in a '.env' file in the root. With variables for USER = "[your MYSQL user]", DATABASEPASSWORD = "[your MYSQL password]" ,HOST = "[your MYSQL host]" and SECRET_KEY = "[your secret key]"
 
 * Run `run --app run --debug run --reload` in the terminal of the root directory of the project or run the 'run.py' file directly and then click the link: http://127.0.0.1:5000.
 
