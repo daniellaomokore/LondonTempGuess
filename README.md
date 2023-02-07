@@ -33,12 +33,14 @@
 ● Framework/libraries did you use for the front-end and back-end: 
 
  ● Flask - I used the Flask framework to create the app since it's a small web application which would allow me to render html templates and use flashes to notify users of their attempts number + if their guess was correct or incorrect , also use of sessions to store data.
+ 
+ ● Bootstrap - I used Bootstrap for the flash message colours for error , success and info flash messages.
 
- ● csv - to open the csv file
- ● random - to get random rows from the csv file
- ● datetime - to format the datetime to make it more readable on the frontend
- ● flask_sqlalchemy - to communicate with the database with SQLAlchemy instead of using raw sql to prevent sql injection
- ● flask_wtf/FlaskForm -to create submission form with csrf token and validators 
+ ● csv - to open the csv file.
+ ● random - to get random rows from the csv file.
+ ● datetime - to format the datetime to make it more readable on the frontend.
+ ● flask_sqlalchemy - to communicate with the database with SQLAlchemy instead of using raw sql to prevent sql injection.
+ ● flask_wtf/FlaskForm -to create submission form with csrf token and validators.
 
 
 ● If you had more time, what further improvements or new features would you add?
@@ -47,7 +49,7 @@
 
 ● What steps did you take to future proof the application for possible expansions?
 > Using a base html so that I can easily make it a multi-page web app if I wanted to expand it without repeating code
-Using Unit Testing to make sure the code functionality is working as expected 
+Using Unit Testing to make sure the code functionality is working as expected.
 
 
 ● Which part of the challenge are you most proud of and why?
