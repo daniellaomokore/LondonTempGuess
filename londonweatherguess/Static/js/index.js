@@ -1,14 +1,20 @@
+
+// This triggers flashes with the class type "alert-message' to last for 3 seconds before fading out
 setTimeout(() => {
              document.getElementById("alert-message").style.opacity = "0";
             }, 3000);
 
+
+
+// This makes the confetti last 3 seconds before disappearing
 let confetti = document.getElementsByClassName("confetti");
 setTimeout(() => {
   Array.from(confetti).forEach((confetti) => {
   confetti.style.display='none';
 })
   }, 3000);
-  
+
+// This triggers confetti to show when the flashes class type is "alert-success" - Hence when the user is correct
 const successMessage = document.getElementsByClassName("alert-success")[0];
   if (successMessage) {
     let width = window.innerWidth;

@@ -7,11 +7,11 @@ from londonweatherguess.weatherAppFunctions import saveResultToDatabase, check_i
 
 @app.route("/", methods=["GET", "POST"])
 def gamepage():
-    form = temperatureGuess()
+    form = temperatureGuess()   # create a form object of the form class
 
-    if request.method == "POST":
-        if form.validate_on_submit():
-            users_guess = form.users_guess.data
+    if request.method == "POST": # if a post method request is made
+        if form.validate_on_submit():  # if the users guess submission is valid
+            users_guess = form.users_guess.data   # get the users guess from their form submission
             saveResultToDatabase(UserGuess=users_guess, ActualTemp=session["roundTemp"], DateTime=session["dt"])
             result = check_if_temps_match(users_guess, session["roundTemp"])
             flash("Correct Answer! Well done", "success") if result else flash(
@@ -19,9 +19,11 @@ def gamepage():
             flash("Attempt Number: {}".format(getUserAttemptNumber()), "info")
             return redirect("/")
 
-    if request.method == "GET":
-        dt, formatted_date, roundTemp = get_random_row()
-        session["dt"]=dt
+    if request.method == "GET":   # if a get method request is made/when the page loads
+        dt, formatted_date, roundTemp = get_random_row()  # call the get_random_row() function and put the data returned into variables
+
+        # save the data into sessions
+        session["dt"] = dt
         session["formatted_date"]=formatted_date
         session["roundTemp"] = roundTemp
 

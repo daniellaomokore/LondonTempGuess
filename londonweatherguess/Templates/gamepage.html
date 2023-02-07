@@ -6,8 +6,10 @@
 {% block content %}
 
      {% with messages = get_flashed_messages(with_categories=true) %}
+     <!-- If a flash messages exists -->
      {% if messages %}
          {% for category,message in messages %}
+         <!-- If the flash messages category is 'success', make it's colour green -->
          {% if category == "success" %}
              <div class="alert alert-success mb-3 alert-dismissible fade show" role="alert" id="alert-message" >
                  {{ message }}
@@ -15,13 +17,14 @@
              </div>
 
          {% endif %}
-
+         <!-- If the flash messages category is 'error', make it's colour red using 'alert danger' -->
          {% if category == "error" %}
              <div class="alert alert-danger mb-3 alert-dismissible fade show" role="alert" id="alert-message" >
                  {{ message }}
              </div>
          {% endif %}
 
+         <!-- If the flash messages category is 'info', make it's colour green using 'alert success' -->
          {% if category == "info" %}
              <div class="alert alert-success mb-3 alert-dismissible fade show" role="alert" id="alert-message" >
                  {{ message }}
@@ -32,7 +35,6 @@
            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
                <span aria-hidden="true"></span>
            </button>
-
 
 
          {% endfor %}
@@ -46,6 +48,7 @@
 
 {{ formatted_date }}</h1>
 
+<!-- This is the submission form for user's 'temperatureGuess' -->
 <form type="submit" name="submit" method="POST">
     {{ form.hidden_tag() }}  <!-- This will create our csrf token-->
     <p>{{ form.users_guess(placeholder="Enter Temperature in Celsius") }}°C</p>

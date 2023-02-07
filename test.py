@@ -12,7 +12,6 @@ class TestSaveResultToDatabase(unittest.TestCase):
     @patch('londonweatherguess.weatherAppFunctions.the_user')
     @patch('londonweatherguess.weatherAppFunctions.database')
     def test_save_result_to_database(self, mock_database, mock_the_user, mock_datetime):
-        # Call the function being tested
         result = saveResultToDatabase(UserGuess='5', ActualTemp='12', DateTime="1979-01-01 06:00:00 +0000 UTC")
 
         self.assertEqual(result, 'Result Saved')
