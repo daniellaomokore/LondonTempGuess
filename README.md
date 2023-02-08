@@ -28,6 +28,11 @@
 * Run `run --app run --debug run --reload` in the terminal of the root directory of the project or run the 'run.py' file directly and then click the link: http://127.0.0.1:5000.
 
 
+✨<b>How to Run:</b>
+
+* Run the 'test.py' file in the root directory.
+
+
 ❔ <b>Follow-Up Questions</b>: ❓
 
 ● Framework/libraries did you use for the front-end and back-end: 
