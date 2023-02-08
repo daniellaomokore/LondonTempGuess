@@ -9,9 +9,9 @@ from londonweatherguess.weatherAppFunctions import saveResultToDatabase, check_i
 # in the main module with a mock object, created by the mock_database fixture
 class TestSaveResultToDatabase(unittest.TestCase):
     @patch('londonweatherguess.weatherAppFunctions.datetime')
-    @patch('londonweatherguess.weatherAppFunctions.the_user')
+    @patch('londonweatherguess.weatherAppFunctions.TheUser')
     @patch('londonweatherguess.weatherAppFunctions.database')
-    def test_save_result_to_database(self, mock_database, mock_the_user, mock_datetime):
+    def test_save_result_to_database(self, mock_database, mock_TheUser, mock_datetime):
         result = saveResultToDatabase(UserGuess='5', ActualTemp='12', DateTime="1979-01-01 06:00:00 +0000 UTC")
 
         self.assertEqual(result, 'Result Saved')
