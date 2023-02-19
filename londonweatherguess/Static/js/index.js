@@ -1,5 +1,5 @@
 
-// This triggers flashes with the class type "alert-message' to last for 3 seconds before fading out
+// This triggers flashes with the id type "alert-message' to last for 3 seconds before fading out
 setTimeout(() => {
              document.getElementById("alert-message").style.opacity = "0";
             }, 3000);

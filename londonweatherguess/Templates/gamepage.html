@@ -8,12 +8,11 @@
      {% with messages = get_flashed_messages(with_categories=true) %}
      <!-- If a flash messages exists -->
      {% if messages %}
-         {% for category,message in messages %}
+       {% for category,message in messages %}
          <!-- If the flash messages category is 'success', make it's colour green -->
          {% if category == "success" %}
              <div class="alert alert-success mb-3 alert-dismissible fade show" role="alert" id="alert-message" >
                  {{ message }}
-                 <script src="../static/js/index.js"></script>
              </div>
 
          {% endif %}
@@ -26,7 +25,7 @@
 
          <!-- If the flash messages category is 'info', make it's colour green using 'alert success' -->
          {% if category == "info" %}
-             <div class="alert alert-success mb-3 alert-dismissible fade show" role="alert" id="alert-message" >
+             <div class="alert alert-info mb-3 alert-dismissible fade show" role="alert" >
                  {{ message }}
              </div>
 
@@ -37,7 +36,7 @@
            </button>
 
 
-         {% endfor %}
+        {% endfor %}
 
      {% endif%}
      {% endwith %}
@@ -55,5 +54,9 @@
     <br/>
     {{ form.submit() }}
 </form>
+
+
+<!-- load js last so that it knows when to run certain code blocks according to certain id and classes in the html. -->
+<script src="../static/js/index.js"></script>
 
 {% endblock %}
