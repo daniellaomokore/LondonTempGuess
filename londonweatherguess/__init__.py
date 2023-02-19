@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 from londonweatherguess.config import DATABASEPASSWORD, DATABASENAME, SECRET_KEY
 
-
 # Initialise the flask app
 app = Flask(__name__)
 

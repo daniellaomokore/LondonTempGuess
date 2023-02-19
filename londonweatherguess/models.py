@@ -8,27 +8,26 @@ from sqlalchemy import create_engine, Column, Integer, DateTime, orm
 
 
 # TO CREATE THE DATABASE
+def create_database():
+    # Establish a connection to the MySQL server
+    cnx = mysql.connector.connect(user=USER, password=DATABASEPASSWORD, host=HOST)
 
-# Establish a connection to the MySQL server
-cnx = mysql.connector.connect(user=USER, password=DATABASEPASSWORD,host=HOST)
+    # Create a cursor object to execute SQL commands
+    cursor = cnx.cursor()
 
-# Create a cursor object to execute SQL commands
-cursor = cnx.cursor()
+    # Execute the SQL command to create the new database
+    cursor.execute("CREATE DATABASE {}".format(DATABASENAME))
 
-# Execute the SQL command to create the new database
-cursor.execute("CREATE DATABASE {}".format(DATABASENAME))
+    # Commit the transaction to make the database creation permanent
+    cnx.commit()
 
-# Commit the transaction to make the database creation permanent
-cnx.commit()
-
-# Close the cursor and the connection
-cursor.close()
-cnx.close()
-
-
+    # Close the cursor and the connection
+    cursor.close()
+    cnx.close()
 
 
-# TO CREATE DATABASE TABLES
+
+# DATABASE TABLE SCHEMA
 
 Base = sqlalchemy.orm.declarative_base()
 
@@ -46,10 +45,9 @@ engine = create_engine("mysql+mysqlconnector://{user}:{password}@{host}/{Databas
     DatabaseName=DATABASENAME
 ))
 
+def create_database_table():
+    Base.metadata.create_all(engine)
 
-Base.metadata.create_all(engine)
-
-
-
-
-
+if __name__ == "__main__":
+    create_database()
+    create_database_table()
