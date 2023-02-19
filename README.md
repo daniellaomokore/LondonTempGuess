@@ -19,9 +19,7 @@
 
 * Install the dependencies by running `pip install -r requirements.txt` in the terminal or command prompt on your system.
 
-* Create the database by opening the 'Database' directory in the 'londonweatherguess' directory , copy the content  within the 'createDatabase.sql' file and run it into your MYSQL Workbench or MYSQL CLI to create the database . 
-
-* Run the 'models.py' file to create your database table.
+* Run the 'models.py' file to create your database and it's tables.
 
 * set up your environmental variables in a '.env' file in the root. With variables for USER = "[your MYSQL user]", DATABASEPASSWORD = "[your MYSQL password]" ,HOST = "[your MYSQL host]" and SECRET_KEY = "[your secret key]"
 
