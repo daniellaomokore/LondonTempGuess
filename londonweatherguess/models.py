@@ -1,9 +1,34 @@
 import sqlalchemy
+import mysql.connector
 if __name__ == '__main__':
     from config import DATABASEPASSWORD, DATABASENAME, HOST, USER
 else:
     from londonweatherguess.config import DATABASEPASSWORD, DATABASENAME, USER,HOST
 from sqlalchemy import create_engine, Column, Integer, DateTime, orm
+
+
+# TO CREATE THE DATABASE
+
+# Establish a connection to the MySQL server
+cnx = mysql.connector.connect(user=USER, password=DATABASEPASSWORD,host=HOST)
+
+# Create a cursor object to execute SQL commands
+cursor = cnx.cursor()
+
+# Execute the SQL command to create the new database
+cursor.execute("CREATE DATABASE {}".format(DATABASENAME))
+
+# Commit the transaction to make the database creation permanent
+cnx.commit()
+
+# Close the cursor and the connection
+cursor.close()
+cnx.close()
+
+
+
+
+# TO CREATE DATABASE TABLES
 
 Base = sqlalchemy.orm.declarative_base()
 
