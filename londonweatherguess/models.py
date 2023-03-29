@@ -8,7 +8,7 @@ from sqlalchemy import create_engine, Column, Integer, DateTime, orm
 
 
 # TO CREATE THE DATABASE
-# Note: I put this in a function to prevent cnx from running when i run the app even when i havent ran the models file.
+# Note: I put this in a function to prevent cnx from running when i run the app even when I haven't ran the models file.
 def create_database():
     # Establish a connection to the MySQL server
     cnx = mysql.connector.connect(user=USER, password=DATABASEPASSWORD, host=HOST)

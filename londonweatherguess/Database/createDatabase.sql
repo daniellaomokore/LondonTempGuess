@@ -1,4 +1,5 @@
--- Run in MySQL Workbench to create the Database
+-- Run in MySQL Workbench to create the Database -->
+-- Note: The above is no longer needed as I have made it possible to create the DB from the models.py file
 
 
 -- Part 1 Create the Database
