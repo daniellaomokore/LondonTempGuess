@@ -21,6 +21,11 @@ def getUserAttemptNumber():
     """
     This function returns the number of guessing attempts the user has had
     """
+
+    # note: Since we've created an index named 'idx_user_attempt' for the 'UserAttempt' column,
+    # MySQL will automatically use the index to optimize the query. We don't need to specify the index
+    # in the query since SQLAlchemy will handle it for us.
+    # Using the index will speed up the search
     result = database.session.query(func.max(TheUser.UserAttempt)).scalar()
     return result
 

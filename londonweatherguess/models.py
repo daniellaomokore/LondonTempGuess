@@ -4,7 +4,7 @@ if __name__ == '__main__':
     from config import DATABASEPASSWORD, DATABASENAME, HOST, USER
 else:
     from londonweatherguess.config import DATABASEPASSWORD, DATABASENAME, USER,HOST
-from sqlalchemy import create_engine, Column, Integer, DateTime, orm
+from sqlalchemy import create_engine, Column, Integer, DateTime, orm, Index
 
 
 # TO CREATE THE DATABASE
@@ -38,6 +38,11 @@ class TheUser(Base):
     UserGuess = Column(Integer)
     ActualTemp = Column(Integer)
     DateTime = Column(DateTime)
+
+    # Create an index for the UserAttempt column
+    __table_args__ = (
+        Index('idx_user_attempt', UserAttempt),
+    )
 
 engine = create_engine("mysql+mysqlconnector://{user}:{password}@{host}/{DatabaseName}".format(
     user=USER,

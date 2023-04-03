@@ -12,8 +12,7 @@
 <img width="944" alt="pic2" src="https://user-images.githubusercontent.com/79287671/216766039-4548db10-927c-447d-91c8-c6e3fd67316f.png">
 
 <img width="373" alt="pic3" src="https://user-images.githubusercontent.com/79287671/216766062-92ecc54c-67e0-4d39-8803-5236816f6fa7.png">
-                          
-                        
+                           
 
 ✨<b>How to Run:</b>
 

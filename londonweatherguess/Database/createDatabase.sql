@@ -17,3 +17,9 @@ CREATE TABLE the_user (
     CONSTRAINT pk_the_user PRIMARY KEY (UserAttempt)
 
 );
+
+-- create an index for User Attempt column
+CREATE INDEX idx_UserAttempt
+ON the_users (UserAttempt);
+
+
