@@ -52,6 +52,8 @@
 ● What steps did you take to future proof the application for possible expansions?
 > Using a base html so that I can easily make it a multi-page web app if I wanted to expand it without repeating code
 > Using Unit Testing to make sure the code functionality is working as expected.
+> I've used SQL Indexes in my Database to speed up database queries and make data retrieval more efficient.
+
 
 
 ● Which part of the challenge are you most proud of and why?
