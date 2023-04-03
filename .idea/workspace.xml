@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce920956-1f9e-4013-8770-758b741d12c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LondonTempGuess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LondonTempGuess.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/activate.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/activate.fish" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/activate.nu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/activate.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/activate_this.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/deactivate.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/deactivate.nu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip-3.11.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip3.11.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pydoc.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/python.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pythonw.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/wheel-3.11.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/wheel.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/wheel3.11.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/wheel3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/londonweatherguess/Database/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/londonweatherguess/Database/createDatabase.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/londonweatherguess/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/londonweatherguess/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/londonweatherguess/weatherAppFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/londonweatherguess/weatherAppFunctions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
