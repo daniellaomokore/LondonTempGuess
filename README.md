@@ -60,4 +60,4 @@
 > I'm most proud of the efficient and scalable backend system developed for the web app and the seamless integration of the backend with the frontend, which provides a smooth and responsive user experience & the unit testing and mocking.
 
 ● Which parts did you spend the most time with? What did you find most difficult?
-> The functionality to ensure that the csv was validating the correct temperature against the users temperature guess whilst also refreshing the page without calling the same function twice on the GET and POST request. Also session cache issues with certain browsers.
+> The functionality to ensure that the csv was validating the correct temperature against the users temperature guess whilst also refreshing the page without calling the same function twice on the GET and POST request. Also I came across a session cache issues with certain browsers which I later developed a solution to solve this problem .
