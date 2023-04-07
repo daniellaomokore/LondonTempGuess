@@ -27,7 +27,7 @@
 
 ✨<b>How to Test:</b>
 
-* Run the 'test.py' file in the root directory.
+* Run `test run.py` in the terminal of the root directory of the project or run the 'test.py' file directly.
 
 
 ❔ <b>Follow-Up Questions</b>: ❓
