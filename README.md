@@ -30,6 +30,10 @@
 * Run `test run.py` in the terminal of the root directory of the project or run the 'test.py' file directly.
 
 
+
+* Code Structure reference: https://youtu.be/44PvX0Yv368
+
+
 ❔ <b>Follow-Up Questions</b>: ❓
 
 ● Framework/libraries did you use for the front-end and back-end: 

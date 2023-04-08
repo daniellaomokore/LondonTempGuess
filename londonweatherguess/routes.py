@@ -7,6 +7,9 @@ from londonweatherguess.weatherAppFunctions import saveResultToDatabase, check_i
 
 @app.route("/", methods=["GET", "POST"])
 def gamepage():
+    """
+    This function displays the webpage for the game and handles GET and POST requests to the root URL ("/").
+    """
     form = temperatureGuess()   # create a form object of the form class
 
     if request.method == "POST": # if a post method request is made

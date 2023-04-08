@@ -8,7 +8,11 @@ from sqlalchemy import create_engine, Column, Integer, DateTime, orm
 
 # TO CREATE THE DATABASE
 # Note: I put this in a function to prevent cnx from running when i run the app even when I haven't ran the models file.
+
 def create_database():
+    """
+    This function creates a new MYSQL database.
+    """
     # Establish a connection to the MySQL server
     cnx = mysql.connector.connect(user=USER, password=DATABASEPASSWORD, host=HOST)
 
@@ -32,6 +36,9 @@ def create_database():
 Base = sqlalchemy.orm.declarative_base()
 
 class TheUser(Base):
+    """
+        This function creates a new MYSQL database table.
+    """
     __tablename__ = 'the_user'
     UserAttempt = Column(Integer, autoincrement=True, primary_key=True, index=True) #The 'index=True' argument tells SQLAlchemy to create an index on the corresponding column
     UserGuess = Column(Integer)

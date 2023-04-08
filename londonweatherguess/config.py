@@ -1,6 +1,11 @@
 import os
 from dotenv import load_dotenv
 
+
+"""
+    The code below sets up the necessary environmental variables for connecting to a MySQL database and sets a secret key.
+"""
+
 # load environmental variables
 load_dotenv()
 

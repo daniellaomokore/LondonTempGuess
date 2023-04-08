@@ -3,6 +3,17 @@ from flask_sqlalchemy import SQLAlchemy
 
 from londonweatherguess.config import DATABASEPASSWORD, DATABASENAME, SECRET_KEY
 
+"""
+Code Structure reference: 
+https://youtu.be/44PvX0Yv368
+"""
+
+"""
+This code block sets up a Flask web application with a secret key for encryption and a MySQL database for storage. It also initializes a database connection using the SQLAlchemy library, and imports the URL routes and view functions defined in the routes module.
+"""
+
+
+
 # Initialise the flask app
 app = Flask(__name__)
 
