@@ -5,8 +5,8 @@ from londonweatherguess.weatherAppFunctions import saveResultToDatabase, check_i
 
 
 
-# The @patch decorator is used in this test case to replace the actual 'database','the_users' and 'datetime' module,
-# in the main module with a mock object, created by the mock_database fixture
+# The '@patch' decorator is used in this test case to replace the actual 'database','the_users' and 'datetime' module,
+# in the main module with a mock object, created by the 'mock_database','mock_TheUser' and 'mock_datetime'  fixture.
 class TestSaveResultToDatabase(unittest.TestCase):
     @patch('londonweatherguess.weatherAppFunctions.datetime')
     @patch('londonweatherguess.weatherAppFunctions.TheUser')
@@ -32,8 +32,13 @@ class TestCheckIfTempsMatch(unittest.TestCase):
         self.assertFalse(result)
 
 
-# Testing the getUserAttemptNumber() Function with mocking
+
+# The '@patch' decorator is used in this test case to replace the actual 'database.session.query',
+# in the main module with a mock object, created by the 'mock_query' fixture.
 class TestGetUserAttemptNumber(unittest.TestCase):
+    """
+     Testing the 'getUserAttemptNumber()' function with mocking.
+    """
 
     @patch('londonweatherguess.database.session.query')
     def test_get_user_attempt_number(self, mock_query):
