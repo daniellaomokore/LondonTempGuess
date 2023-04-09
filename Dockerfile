@@ -17,8 +17,10 @@ RUN apt-get update && apt-get install -y default-mysql-client
 COPY . .
 
 # Set the environment variable for Flask
-#Note:This app doesnt have any
+ENV FLASK_APP run.py
 
+# Set the environment variables for the MySQL database configuration
+ENV
 
 # Expose the port that the app will run on
 EXPOSE 5000
