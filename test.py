@@ -10,8 +10,11 @@ from londonweatherguess.weatherAppFunctions import saveResultToDatabase, check_i
 class TestSaveResultToDatabase(unittest.TestCase):
     @patch('londonweatherguess.weatherAppFunctions.database')
     def test_save_result_to_database(self, mock_database):
+
+        # Call the function under test
         result = saveResultToDatabase(UserGuess='5', ActualTemp='12', DateTime="1979-01-01 06:00:00 +0000 UTC")
 
+        # Make assertions about the result
         self.assertEqual(result, 'Result Saved')
         
 
