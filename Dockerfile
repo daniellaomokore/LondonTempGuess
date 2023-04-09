@@ -20,7 +20,13 @@ COPY . .
 ENV FLASK_APP run.py
 
 # Set the environment variables for the MySQL database configuration
-ENV
+ENV USER=
+ENV DATABASEPASSWORD=
+ENV DATABASENAME=
+ENV HOST=
+
+# Run the Python script to create the database schema
+RUN python model.py
 
 # Expose the port that the app will run on
 EXPOSE 5000
