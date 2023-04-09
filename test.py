@@ -8,13 +8,12 @@ from londonweatherguess.weatherAppFunctions import saveResultToDatabase, check_i
 # The '@patch' decorator is used in this test case to replace the actual 'database','the_users' and 'datetime' module,
 # in the main module with a mock object, created by the 'mock_database','mock_TheUser' and 'mock_datetime'  fixture.
 class TestSaveResultToDatabase(unittest.TestCase):
-    @patch('londonweatherguess.weatherAppFunctions.datetime')
-    @patch('londonweatherguess.weatherAppFunctions.TheUser')
     @patch('londonweatherguess.weatherAppFunctions.database')
-    def test_save_result_to_database(self, mock_database, mock_TheUser, mock_datetime):
+    def test_save_result_to_database(self, mock_database):
         result = saveResultToDatabase(UserGuess='5', ActualTemp='12', DateTime="1979-01-01 06:00:00 +0000 UTC")
 
         self.assertEqual(result, 'Result Saved')
+        
 
 
 class TestCheckIfTempsMatch(unittest.TestCase):
@@ -42,9 +41,16 @@ class TestGetUserAttemptNumber(unittest.TestCase):
 
     @patch('londonweatherguess.database.session.query')
     def test_get_user_attempt_number(self, mock_query):
-        mock_query.return_value.scalar.return_value = 42
-        result = getUserAttemptNumber()
-        self.assertEqual(result, 42)
+
+        # Set up the mock to return the expected value
+        mock_query.return_value.scalar.return_value = 5
+
+        # Call the function under test
+        userAttemptNumber = getUserAttemptNumber()
+
+        # Make assertions about the result
+        self.assertEqual(userAttemptNumber, 5)
+
 
 
 if __name__ == '__main__':
