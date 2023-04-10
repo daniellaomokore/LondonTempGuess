@@ -1,7 +1,8 @@
 import unittest
-from unittest.mock import patch
-
-from londonweatherguess.weatherAppFunctions import saveResultToDatabase, check_if_temps_match, getUserAttemptNumber
+from unittest.mock import patch, mock_open, Mock
+from londonweatherguess.weatherAppFunctions import saveResultToDatabase, check_if_temps_match, getUserAttemptNumber, \
+    get_random_row
+from sqlalchemy.exc import IntegrityError,OperationalError
 
 
 
@@ -9,15 +10,37 @@ from londonweatherguess.weatherAppFunctions import saveResultToDatabase, check_i
 # in the main module with a mock object, created by the 'mock_database','mock_TheUser' and 'mock_datetime'  fixture.
 class TestSaveResultToDatabase(unittest.TestCase):
     @patch('londonweatherguess.weatherAppFunctions.database')
-    def test_save_result_to_database(self, mock_database):
+    def test_save_result_to_database_success(self, mock_database):
 
         # Call the function under test
         result = saveResultToDatabase(UserGuess='5', ActualTemp='12', DateTime="1979-01-01 06:00:00 +0000 UTC")
 
         # Make assertions about the result
         self.assertEqual(result, 'Result Saved')
-        
 
+    @patch('londonweatherguess.database.session.add')
+    @patch('londonweatherguess.database.session.commit')
+    def test_save_result_to_database_IntegrityError(self, mock_commit, mock_add):
+        # Mocking the database.session.add method to raise an IntegrityError
+
+        mock_add.side_effect = IntegrityError(None, None, None)
+        mock_commit.side_effect = IntegrityError(None, None, None)
+
+        result = saveResultToDatabase(UserGuess='5', ActualTemp='12', DateTime="1979-01-01 06:00:00 +0000 UTC")
+
+        self.assertEqual(result, 'Data already exists in database')
+
+    @patch('londonweatherguess.database.session.add')
+    @patch('londonweatherguess.database.session.commit')
+    def test_save_result_to_database_IntegrityError(self, mock_commit, mock_add):
+        # Mocking the database.session.add method to raise an IntegrityError
+
+        mock_add.side_effect = OperationalError(None, None, None)
+        mock_commit.side_effect = OperationalError(None, None, None)
+
+        result = saveResultToDatabase(UserGuess='5', ActualTemp='12', DateTime="1979-01-01 06:00:00 +0000 UTC")
+
+        self.assertEqual(result, "Unable to connect to database")
 
 class TestCheckIfTempsMatch(unittest.TestCase):
 
@@ -48,11 +71,7 @@ class TestGetUserAttemptNumber(unittest.TestCase):
         # Set up the mock to return the expected value
         mock_query.return_value.scalar.return_value = 5
 
-        # Call the function under test
-        userAttemptNumber = getUserAttemptNumber()
-
-        # Make assertions about the result
-        self.assertEqual(userAttemptNumber, 5)
+        self.assertEqual(getUserAttemptNumber(), 5)
 
 
 
