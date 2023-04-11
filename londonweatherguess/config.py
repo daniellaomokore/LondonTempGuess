@@ -14,7 +14,7 @@ load_dotenv()
 
 """DATABASENAME = "tempGuess_user"
 """
-"""DATABASENAME = "heroku_b30aff198b29397"
+"""
 USER = os.environ.get('USER')
 DATABASEPASSWORD = os.environ.get('DATABASEPASSWORD')  # THIS IS YOUR MYSQLWORKBENCH PASSWORD
 HOST = os.environ.get('HOST')
@@ -22,6 +22,8 @@ HOST = os.environ.get('HOST')
 # secret key
 SECRET_KEY = os.environ.get('SECRET_KEY')"""
 
+
+DATABASENAME = "heroku_b30aff198b29397"
 USER = "b03ee4d90b32be"
 DATABASEPASSWORD = "70cbe40f"  # THIS IS YOUR MYSQLWORKBENCH PASSWORD
 HOST = "us-cdbr-east-06.cleardb.net"
