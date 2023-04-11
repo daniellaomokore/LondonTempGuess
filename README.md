@@ -27,12 +27,12 @@
   * HOST = "[your MYSQL host]" 
   * SECRET_KEY = "[your secret key]"
 
-* Run `python run.py` in the terminal of the root directory of the project or run the 'run.py' file directly and then click the link: http://127.0.0.1:5000.
+* Run `python app.py` in the terminal of the root directory of the project or run the 'run.py' file directly and then click the link: http://127.0.0.1:5000.
 
 
 ✨<b>How to Test:</b>
 
-* Run `test run.py` in the terminal of the root directory of the project or run the 'test.py' file directly.
+* Run `test test.py` in the terminal of the root directory of the project or run the 'test.py' file directly.
 
 
 
