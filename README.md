@@ -32,7 +32,7 @@
 
 ✨<b>How to Test:</b>
 
-* Run `test test.py` in the terminal of the root directory of the project or run the 'test.py' file directly.
+* Run `python test.py` in the terminal of the root directory of the project or run the 'test.py' file directly.
 
 
 
