@@ -3,7 +3,9 @@
 
 🚀<b>Usage</b>:
 
-<i>This is a simple web app game where users need to guess the temperature at a certain date and time from the past in London</i>
+<i>This is a simple web app game where users need to guess the temperature at a certain date and time from the past in London.
+
+This was created with Python,Html,Css, JavaScript and a CSV file for the temperature data.</i>
 
 <img width="956" alt="picpic" src="https://user-images.githubusercontent.com/79287671/216978137-52fb7585-ad1c-4aab-a333-46650c941e56.png">
 
