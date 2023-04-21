@@ -5,7 +5,7 @@
 
 <i>This is a simple web app game where users need to guess the temperature at a certain date and time from the past in London.
 
-This was created with Python,Html,Css, JavaScript and a CSV file for the temperature data.</i>
+This was created with Python, Html, Css, JavaScript and a CSV file for the temperature data.</i>
 
 <img width="956" alt="picpic" src="https://user-images.githubusercontent.com/79287671/216978137-52fb7585-ad1c-4aab-a333-46650c941e56.png">
 
@@ -47,7 +47,7 @@ This was created with Python,Html,Css, JavaScript and a CSV file for the tempera
 
  ● Flask - I used the Flask framework to create the app since it's a small web application which would allow me to render html templates and use flashes to notify users of their attempts number + if their guess was correct or incorrect , also use of sessions to store data.
  
- ● Bootstrap - I used Bootstrap for the flash message colours for error , success and info flash messages.
+ ● Bootstrap - I used Bootstrap for the flash message colours for error , success and info flash messages. 
 
  ● csv - to open the csv file.
  ● random - to get random rows from the csv file.
